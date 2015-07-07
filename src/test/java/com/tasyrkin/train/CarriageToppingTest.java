@@ -1,9 +1,5 @@
 package com.tasyrkin.train;
 
-import com.google.common.base.Optional;
-import com.google.common.collect.Lists;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static com.tasyrkin.train.WheelPair.WHITE_SMALL_WHEEL_PAIR;
@@ -15,13 +11,13 @@ public class CarriageToppingTest {
     @Test
     public void carriageHasTopping(){
 
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR,WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE,
-                Optional.of(CarriageTopping.NORMAL)
-        );
+        final Carriage carriage = new CarriageBuilder()
+                .couplings(Coupling.HARD)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .shape(CarriageShape.RECTANGLE)
+                .topping(CarriageTopping.NORMAL)
+                .build();
 
         assertThat(carriage.getTopping().isPresent(), is(true));
     }
@@ -29,12 +25,12 @@ public class CarriageToppingTest {
     @Test
     public void carriageHasNoTopping(){
 
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR,WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
-        );
+        final Carriage carriage = new CarriageBuilder()
+                .couplings(Coupling.HARD)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .shape(CarriageShape.RECTANGLE)
+                .build();
 
         assertThat(carriage.getTopping().isPresent(), is(false));
     }
@@ -42,13 +38,13 @@ public class CarriageToppingTest {
     @Test
     public void carriageHasSawTopping(){
 
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR,WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE,
-                Optional.of(CarriageTopping.SAW)
-        );
+        final Carriage carriage = new CarriageBuilder()
+                .couplings(Coupling.HARD)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .shape(CarriageShape.RECTANGLE)
+                .topping(CarriageTopping.SAW)
+                .build();
 
         assertThat(carriage.getTopping().get(), is(CarriageTopping.SAW));
     }
@@ -56,13 +52,13 @@ public class CarriageToppingTest {
     @Test
     public void carriageHasHomeTopping(){
 
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR,WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE,
-                Optional.of(CarriageTopping.HOME)
-        );
+        final Carriage carriage = new CarriageBuilder()
+                .couplings(Coupling.HARD)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .wheelPair(WHITE_SMALL_WHEEL_PAIR)
+                .shape(CarriageShape.RECTANGLE)
+                .topping(CarriageTopping.HOME)
+                .build();
 
         assertThat(carriage.getTopping().get(), is(CarriageTopping.HOME));
     }
