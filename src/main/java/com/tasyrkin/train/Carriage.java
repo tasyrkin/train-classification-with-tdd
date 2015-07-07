@@ -14,6 +14,7 @@ public class Carriage {
     private final CarriageShape shape;
     private final Optional<CarriageTopping> topping;
     private final List<CarriageMarking> markings;
+    private final CarriageLoading loading;
 
     public Carriage(Coupling frontCoupling,
                     Coupling backCoupling,
@@ -25,6 +26,7 @@ public class Carriage {
                 wheelPairs,
                 carriageShape,
                 Lists.<CarriageMarking>newArrayList(),
+                CarriageLoading.EMPTY,
                 Optional.<CarriageTopping>absent()
         );
     }
@@ -34,12 +36,14 @@ public class Carriage {
                     List<WheelPair> wheelPairs,
                     CarriageShape carriageShape,
                     List<CarriageMarking> carriageMarkings,
+                    CarriageLoading carriageLoading,
                     Optional<CarriageTopping> carriageTopping) {
         this.frontCoupling = frontCoupling;
         this.backCoupling = backCoupling;
         this.wheelPairs = ImmutableList.copyOf(wheelPairs);
         this.shape = carriageShape;
         this.markings = ImmutableList.copyOf(carriageMarkings);
+        this.loading = carriageLoading;
         this.topping = carriageTopping;
     }
 
@@ -65,5 +69,9 @@ public class Carriage {
 
     public List<CarriageMarking> getMarkings() {
         return markings;
+    }
+
+    public CarriageLoading getLoading() {
+        return loading;
     }
 }

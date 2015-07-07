@@ -15,6 +15,7 @@ public class CarriageBuilder {
     private CarriageShape shape;
     private CarriageTopping topping;
     private List<CarriageMarking> markings = Lists.newArrayList();
+    private CarriageLoading loading = CarriageLoading.EMPTY;
 
 
     public CarriageBuilder() {
@@ -63,6 +64,11 @@ public class CarriageBuilder {
         return this;
     }
 
+    public CarriageBuilder loading(CarriageLoading loading){
+        this.loading = loading;
+        return this;
+    }
+
     public Carriage build(){
 
         Preconditions.checkNotNull(frontCoupling, "Missing front coupling");
@@ -77,6 +83,7 @@ public class CarriageBuilder {
                 wheelPairs,
                 shape,
                 markings,
+                loading,
                 Optional.fromNullable(topping));
     }
 }
