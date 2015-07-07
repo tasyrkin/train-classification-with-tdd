@@ -16,6 +16,7 @@ public class CarriageBuilder {
     private CarriageTopping topping;
     private List<CarriageMarking> markings = Lists.newArrayList();
     private CarriageLoading loading = CarriageLoading.EMPTY;
+    private boolean hasInternalEnclosure = false;
 
 
     public CarriageBuilder() {
@@ -69,6 +70,11 @@ public class CarriageBuilder {
         return this;
     }
 
+    public CarriageBuilder hasInternalEnclosure(){
+        this.hasInternalEnclosure = true;
+        return this;
+    }
+
     public Carriage build(){
 
         Preconditions.checkNotNull(frontCoupling, "Missing front coupling");
@@ -84,6 +90,8 @@ public class CarriageBuilder {
                 shape,
                 markings,
                 loading,
-                Optional.fromNullable(topping));
+                Optional.fromNullable(topping),
+                hasInternalEnclosure
+        );
     }
 }

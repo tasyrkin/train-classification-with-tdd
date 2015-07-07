@@ -15,6 +15,7 @@ public class Carriage {
     private final Optional<CarriageTopping> topping;
     private final List<CarriageMarking> markings;
     private final CarriageLoading loading;
+    private final boolean hasInternalEnclosure;
 
     public Carriage(Coupling frontCoupling,
                     Coupling backCoupling,
@@ -27,7 +28,8 @@ public class Carriage {
                 carriageShape,
                 Lists.<CarriageMarking>newArrayList(),
                 CarriageLoading.EMPTY,
-                Optional.<CarriageTopping>absent()
+                Optional.<CarriageTopping>absent(),
+                false
         );
     }
 
@@ -37,7 +39,8 @@ public class Carriage {
                     CarriageShape carriageShape,
                     List<CarriageMarking> carriageMarkings,
                     CarriageLoading carriageLoading,
-                    Optional<CarriageTopping> carriageTopping) {
+                    Optional<CarriageTopping> carriageTopping,
+                    boolean hasInternalEnclosure) {
         this.frontCoupling = frontCoupling;
         this.backCoupling = backCoupling;
         this.wheelPairs = ImmutableList.copyOf(wheelPairs);
@@ -45,6 +48,7 @@ public class Carriage {
         this.markings = ImmutableList.copyOf(carriageMarkings);
         this.loading = carriageLoading;
         this.topping = carriageTopping;
+        this.hasInternalEnclosure = hasInternalEnclosure;
     }
 
     public Coupling getFrontCoupling() {
@@ -73,5 +77,9 @@ public class Carriage {
 
     public CarriageLoading getLoading() {
         return loading;
+    }
+
+    public boolean hasInternalEnclosure() {
+        return hasInternalEnclosure;
     }
 }
