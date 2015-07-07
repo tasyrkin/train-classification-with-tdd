@@ -9,11 +9,13 @@ public class Carriage {
     private final Coupling frontCoupling;
     private final Coupling backCoupling;
     private final List<WheelPair> wheelPairs;
+    private final CarriageShape shape;
 
-    public Carriage(Coupling frontCoupling, Coupling backCoupling, List<WheelPair> wheelPairs) {
+    public Carriage(Coupling frontCoupling, Coupling backCoupling, List<WheelPair> wheelPairs, CarriageShape shape) {
         this.frontCoupling = frontCoupling;
         this.backCoupling = backCoupling;
         this.wheelPairs = ImmutableList.copyOf(wheelPairs);
+        this.shape = shape;
     }
 
     public Coupling getFrontCoupling() {
@@ -26,5 +28,9 @@ public class Carriage {
 
     public List<WheelPair> getWheelPairs() {
         return wheelPairs;
+    }
+
+    public CarriageShape getShape() {
+        return shape;
     }
 }
