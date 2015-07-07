@@ -25,7 +25,7 @@ public class Train {
             return;
         }
         checkArgument(locomotive.getBackCoupling() == carriages[0].getFrontCoupling(),
-                "Locomotive coupling [%s] is not compatible with first carriage [%s]",
+                "Locomotive coupling [%s] is not compatible with first carriage's coupling [%s]",
                 locomotive.getBackCoupling(), carriages[0].getFrontCoupling());
 
         for(int i = 1; i < carriages.length; i++){
