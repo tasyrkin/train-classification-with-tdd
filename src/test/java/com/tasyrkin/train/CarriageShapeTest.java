@@ -10,44 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class CarriageTest {
-
-    @Test
-    public void carriageHasWheelPairs(){
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_BIG_WHEEL_PAIR, WHITE_BIG_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
-        );
-
-        assertThat(carriage.getWheelPairs(), is(notNullValue()));
-    }
-
-    @Test
-    public void carriageHasThreeWheelPairs(){
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_BIG_WHEEL_PAIR, WHITE_BIG_WHEEL_PAIR, WHITE_BIG_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
-        );
-
-        assertThat(carriage.getWheelPairs().size(), is(3));
-    }
-
-    @Test
-    public void carriageHasWhiteAndBlackWheelPairs(){
-        final Carriage carriage = new Carriage(
-                Coupling.HARD,
-                Coupling.HARD,
-                Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, BLACK_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
-        );
-
-        assertThat(carriage.getWheelPairs().get(0).getColor(), is(WheelColor.WHITE));
-        assertThat(carriage.getWheelPairs().get(1).getColor(), is(WheelColor.BLACK));
-    }
+public class CarriageShapeTest {
 
     @Test
     public void carriageHasAShapeOfRectangle(){
