@@ -15,7 +15,7 @@ public class CarriageToppingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .topping(CarriageTopping.NORMAL)
                 .build();
 
@@ -29,7 +29,7 @@ public class CarriageToppingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .build();
 
         assertThat(carriage.getTopping().isPresent(), is(false));
@@ -42,7 +42,7 @@ public class CarriageToppingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .topping(CarriageTopping.SAW)
                 .build();
 
@@ -56,7 +56,7 @@ public class CarriageToppingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .topping(CarriageTopping.HOME)
                 .build();
 

@@ -18,7 +18,7 @@ public class CarriageWheelPairsTest {
                 Coupling.HARD,
                 Coupling.HARD,
                 Lists.newArrayList(WHITE_BIG_WHEEL_PAIR, WHITE_BIG_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
+                CarriageShape.RECTANGLE_SMALL
         );
 
         assertThat(carriage.getWheelPairs(), is(notNullValue()));
@@ -30,7 +30,7 @@ public class CarriageWheelPairsTest {
                 Coupling.HARD,
                 Coupling.HARD,
                 Lists.newArrayList(WHITE_BIG_WHEEL_PAIR, WHITE_BIG_WHEEL_PAIR, WHITE_BIG_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
+                CarriageShape.RECTANGLE_SMALL
         );
 
         assertThat(carriage.getWheelPairs().size(), is(3));
@@ -42,7 +42,7 @@ public class CarriageWheelPairsTest {
                 Coupling.HARD,
                 Coupling.HARD,
                 Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, BLACK_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
+                CarriageShape.RECTANGLE_SMALL
         );
 
         assertThat(carriage.getWheelPairs().get(0).getColor(), is(WheelColor.WHITE));

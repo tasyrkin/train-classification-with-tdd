@@ -3,7 +3,7 @@ package com.tasyrkin.train;
 import org.junit.Test;
 
 import static com.tasyrkin.train.CarriageMarking.*;
-import static com.tasyrkin.train.CarriageShape.RECTANGLE;
+import static com.tasyrkin.train.CarriageShape.RECTANGLE_SMALL;
 import static com.tasyrkin.train.WheelPair.WHITE_SMALL_WHEEL_PAIR;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -17,7 +17,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CIRCLE)
                 .build();
 
@@ -32,7 +32,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CIRCLE)
                 .marking(CIRCLE)
                 .marking(CIRCLE)
@@ -49,7 +49,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(SQUARE)
                 .build();
 
@@ -64,7 +64,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(SQUARE)
                 .marking(SQUARE)
                 .build();
@@ -80,7 +80,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CarriageMarking.RECTANGLE)
                 .build();
 
@@ -95,7 +95,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CarriageMarking.HEXAGON)
                 .build();
 
@@ -110,7 +110,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CarriageMarking.DIAMOND)
                 .build();
 
@@ -125,7 +125,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .build();
 
         assertThat(carriage.getMarkings(), is(notNullValue()));
@@ -139,7 +139,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CarriageMarking.TRIANGLE_SIDE_UP)
                 .build();
 
@@ -153,7 +153,7 @@ public class CarriageMarkingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(RECTANGLE)
+                .shape(RECTANGLE_SMALL)
                 .marking(CarriageMarking.TRIANGLE_SIDE_DOWN)
                 .build();
 

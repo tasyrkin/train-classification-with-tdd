@@ -37,7 +37,7 @@ public class TrainTest {
                         HARD,
                         SOFT,
                         Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),
-                        CarriageShape.RECTANGLE
+                        CarriageShape.RECTANGLE_SMALL
                 )
         );
 
@@ -51,9 +51,9 @@ public class TrainTest {
                         SOFT,
                         Lists.newArrayList(BLACK_SMALL_WHEEL_PAIR, BLACK_BIG_WHEEL_PAIR)
                 ),
-                new Carriage(SOFT, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE),
-                new Carriage(HARD, SOFT, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE),
-                new Carriage(SOFT, SOFT, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE));
+                new Carriage(SOFT, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL),
+                new Carriage(HARD, SOFT, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL),
+                new Carriage(SOFT, SOFT, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL));
 
         assertThat(train.getCarriages().size(), is(3));
     }
@@ -65,7 +65,7 @@ public class TrainTest {
                         HARD,
                         Lists.newArrayList(BLACK_SMALL_WHEEL_PAIR, BLACK_BIG_WHEEL_PAIR)
                 ),
-                new Carriage(HARD, SOFT, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE)
+                new Carriage(HARD, SOFT, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL)
         );
 
         assertThat(train.getLocomotive().getBackCoupling(), is(HARD));
@@ -79,7 +79,7 @@ public class TrainTest {
                         SOFT,
                         Lists.newArrayList(BLACK_SMALL_WHEEL_PAIR, BLACK_BIG_WHEEL_PAIR)
                 ),
-                new Carriage(HARD, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE));
+                new Carriage(HARD, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -89,8 +89,8 @@ public class TrainTest {
                         HARD,
                         Lists.newArrayList(BLACK_SMALL_WHEEL_PAIR, BLACK_BIG_WHEEL_PAIR)
                 ),
-                new Carriage(SOFT, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE),
-                new Carriage(SOFT, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE)
+                new Carriage(SOFT, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL),
+                new Carriage(SOFT, HARD, Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),CarriageShape.RECTANGLE_SMALL)
         );
     }
 

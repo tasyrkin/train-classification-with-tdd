@@ -1,7 +1,5 @@
 package com.tasyrkin.train;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static com.tasyrkin.train.WheelPair.WHITE_SMALL_WHEEL_PAIR;
@@ -16,7 +14,7 @@ public class CarriageInternalEnclosure {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .hasInternalEnclosure()
                 .build();
 
@@ -29,7 +27,7 @@ public class CarriageInternalEnclosure {
                 .couplings(Coupling.HARD)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .build();
 
         assertThat(carriage.hasInternalEnclosure(), is(false));

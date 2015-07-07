@@ -12,7 +12,7 @@ public class CarriageLoadingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WheelPair.WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WheelPair.WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .loading(CarriageLoading.FULL)
                 .build();
 
@@ -25,7 +25,7 @@ public class CarriageLoadingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WheelPair.WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WheelPair.WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .build();
 
         MatcherAssert.assertThat(carriage.getLoading(), Matchers.is(CarriageLoading.EMPTY));
@@ -37,7 +37,7 @@ public class CarriageLoadingTest {
                 .couplings(Coupling.HARD)
                 .wheelPair(WheelPair.WHITE_SMALL_WHEEL_PAIR)
                 .wheelPair(WheelPair.WHITE_SMALL_WHEEL_PAIR)
-                .shape(CarriageShape.RECTANGLE)
+                .shape(CarriageShape.RECTANGLE_SMALL)
                 .loading(CarriageLoading.HALF)
                 .build();
 

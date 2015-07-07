@@ -3,8 +3,6 @@ package com.tasyrkin.train;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 
-import static com.tasyrkin.train.WheelPair.BLACK_SMALL_WHEEL_PAIR;
-import static com.tasyrkin.train.WheelPair.WHITE_BIG_WHEEL_PAIR;
 import static com.tasyrkin.train.WheelPair.WHITE_SMALL_WHEEL_PAIR;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -18,10 +16,10 @@ public class CarriageShapeTest {
                 Coupling.HARD,
                 Coupling.HARD,
                 Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE
+                CarriageShape.RECTANGLE_SMALL
         );
 
-        assertThat(carriage.getShape(), is(CarriageShape.RECTANGLE));
+        assertThat(carriage.getShape(), is(CarriageShape.RECTANGLE_SMALL));
     }
 
     @Test
@@ -30,10 +28,10 @@ public class CarriageShapeTest {
                 Coupling.HARD,
                 Coupling.HARD,
                 Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE_WITH_SOFT_CORNERS
+                CarriageShape.RECTANGLE_SMALL_WITH_SOFT_CORNERS
         );
 
-        assertThat(carriage.getShape(), is(CarriageShape.RECTANGLE_WITH_SOFT_CORNERS));
+        assertThat(carriage.getShape(), is(CarriageShape.RECTANGLE_SMALL_WITH_SOFT_CORNERS));
     }
 
     @Test
@@ -42,10 +40,10 @@ public class CarriageShapeTest {
                 Coupling.HARD,
                 Coupling.HARD,
                 Lists.newArrayList(WHITE_SMALL_WHEEL_PAIR, WHITE_SMALL_WHEEL_PAIR),
-                CarriageShape.RECTANGLE_WITH_SOFT_CORNERS
+                CarriageShape.RECTANGLE_SMALL_WITH_SOFT_CORNERS
         );
 
-        assertThat(carriage.getShape(), is(CarriageShape.RECTANGLE_WITH_SOFT_CORNERS));
+        assertThat(carriage.getShape(), is(CarriageShape.RECTANGLE_SMALL_WITH_SOFT_CORNERS));
     }
 
     @Test
