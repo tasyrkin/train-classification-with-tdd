@@ -1,5 +1,5 @@
 package com.tasyrkin.train;
 
 public enum CarriageMarking {
-    CIRCLE
+    TRIANGLE_SIDE_UP, TRIANGLE_SIDE_DOWN, SQUARE, RECTANGLE, HEXAGON, DIAMOND, CIRCLE
 }
